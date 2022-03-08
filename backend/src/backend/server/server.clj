@@ -7,8 +7,8 @@
 (defn start
   []
   (when (nil? @running-server)
-    (clojure.core/reset! running-server (jetty/run-jetty #'handler/app {:port 3000, :join? false}))
-    (println "server running in port 3000")))
+    (clojure.core/reset! running-server (jetty/run-jetty #'handler/app {:port 5000, :join? false}))
+    (println "server running in port 5000")))
 
 (defn stop
   []
