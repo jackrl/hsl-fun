@@ -22,8 +22,8 @@
         response (client/post url {:content-type "application/graphql"
                                    :body         query
                                    :as           :json})]
-    (-> response
-        :body
-        :data
-        :stopsByRadius
-        :edges)))
+    (map :node (-> response
+                   :body
+                   :data
+                   :stopsByRadius
+                   :edges))))
