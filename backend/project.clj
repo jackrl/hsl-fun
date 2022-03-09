@@ -6,7 +6,7 @@
   :dependencies [[cheshire "5.10.2" :exclusions [com.fasterxml.jackson.core/jackson-core]]
                  [clj-http "3.12.3"]
                  [metosin/reitit "0.5.16"]
-                 [org.clojure/clojure "1.10.1"]
+                 [org.clojure/clojure "1.10.3"]
                  [ring/ring-jetty-adapter "1.9.5"]]
   :repl-options {:init-ns backend.server.server}
   :main ^:skip-aot backend.server.server)
