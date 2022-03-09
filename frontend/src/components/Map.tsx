@@ -8,7 +8,7 @@ export function Map() {
 
     return (
         <div>
-            <MapContainer center={initCenter} zoom={13} scrollWheelZoom={true} style={mapContainerStyle}>
+            <MapContainer center={initCenter} zoom={16} scrollWheelZoom={true} style={mapContainerStyle}>
                 <TileLayer
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
