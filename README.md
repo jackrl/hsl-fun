@@ -1,6 +1,6 @@
 # hsl-fun
 
-Just having some fun with the HSL API.
+Just having some fun with the HSL API. For now the app just allows you to click around the map and showing you the stops within a radius of 500m.
 
 The frontend uses react written in TypeScript.
 
