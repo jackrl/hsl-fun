@@ -8,6 +8,7 @@
                  [metosin/reitit "0.5.16"]
                  [org.clojure/clojure "1.10.3"]
                  [ring/ring-jetty-adapter "1.9.5"]
+                 [ring/ring-mock "0.4.0"]
                  [tortue/spy "2.9.0"]]
   :repl-options {:init-ns backend.server.server}
   :main ^:skip-aot backend.server.server)
