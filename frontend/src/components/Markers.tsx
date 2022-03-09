@@ -14,7 +14,6 @@ export function Markers() {
         async function getStops() {
             const stops = await getStopsInRadius(position.lat, position.lng, radius)
             setStops(stops)
-            console.log(stops)
         }
 
         getStops()
@@ -24,7 +23,6 @@ export function Markers() {
         click(e) {
             setPosition(e.latlng)
             map.flyTo(e.latlng, map.getZoom())
-            console.log('pos',e.latlng)
         },
     })
 
@@ -39,13 +37,15 @@ export function Markers() {
             />
 
             {stops.map((stop, i) => {
-                return (<Marker position={L.latLng(stop.lat, stop.lon)} icon={markerIcon}>
-                    <Popup>
-                        <b>{stop.name}</b><br/>
-                        Distance:   {stop.distance}m<br/>
-                        Accessible: {stop.accessible ? "Yes" : "No"}
-                    </Popup>
-                  </Marker>)
+                return (<Marker position={L.latLng(stop.lat, stop.lon)}
+                                icon={markerIcon}
+                                key={i}>
+                            <Popup>
+                                <b>{stop.name}</b><br />
+                                Distance:   {stop.distance}m<br />
+                                Accessible: {stop.accessible ? "Yes" : "No"}
+                            </Popup>
+                        </Marker>)
             })}
         </div>
     )
