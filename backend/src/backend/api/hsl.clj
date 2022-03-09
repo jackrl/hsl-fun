@@ -13,12 +13,7 @@
                                   name
                                   lat
                                   lon
-                                  wheelchairBoarding
-                                }
-                              }
-                            }
-                          }
-                       }")
+                                  wheelchairBoarding}}}}}")
         response (client/post url {:content-type "application/graphql"
                                    :body         query
                                    :as           :json})]
