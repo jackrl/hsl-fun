@@ -1,7 +1,8 @@
+import { Stop } from "../types/stop"
 
 
-export async function getStopsInRadius(lat: number, lng: number, radius: number) {
-    return {
+export async function getStopsInRadius(lat: number, lng: number, radius: number): Promise<Array<Stop>> {
+    const stopsResponse = {
         "stops": [
             {
                 "name": "Pasilan asema",
@@ -26,4 +27,6 @@ export async function getStopsInRadius(lat: number, lng: number, radius: number)
             }
         ]
     }
+
+    return stopsResponse.stops
 }
